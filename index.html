@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iLukz1_ | Mis Redes</title>
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0e14;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --text-color: #ffffff;
+            --accent-twitch: #9146ff;
+            --accent-kick: #53fc18;
+            --hover-bg: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at top, #1a1f2e 0%, #0b0e14 100%);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .profile-container {
+            margin-bottom: 30px;
+        }
+
+        .profile-pic {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            border: 2px solid var(--glass-border);
+            margin-bottom: 12px;
+            object-fit: cover;
+            background: #222; /* Color temporal */
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .description {
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+
+        .links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            text-decoration: none;
+            color: var(--text-color);
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            font-weight: 600;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .link-item:hover {
+            transform: scale(1.02);
+            background: var(--hover-bg);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .link-item i {
+            position: absolute;
+            left: 20px;
+            font-size: 1.2rem;
+        }
+
+        /* Efectos de pulso para Twitch y Kick (En vivo) */
+        .live-indicator {
+            position: absolute;
+            right: 20px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .twitch-live {
+            background-color: var(--accent-twitch);
+            box-shadow: 0 0 0 rgba(145, 70, 255, 0.4);
+            animation: pulse-twitch 2s infinite;
+        }
+
+        .kick-live {
+            background-color: var(--accent-kick);
+            box-shadow: 0 0 0 rgba(83, 252, 24, 0.4);
+            animation: pulse-kick 2s infinite;
+        }
+
+        @keyframes pulse-twitch {
+            0% { box-shadow: 0 0 0 0 rgba(145, 70, 255, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(145, 70, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(145, 70, 255, 0); }
+        }
+
+        @keyframes pulse-kick {
+            0% { box-shadow: 0 0 0 0 rgba(83, 252, 24, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(83, 252, 24, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(83, 252, 24, 0); }
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: #475569;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-container">
+            <!-- Reemplaza src con el link de tu logo o foto -->
+            <img src="L.jpg" alt="iLukz1_" class="profile-pic">
+            <h1>iLukz1_</h1>
+            <p class="description">Streamer & Tech Enthusiast</p>
+        </div>
+
+        <nav class="links-list">
+            <a href="https://www.twitch.tv/ilukz1_" class="link-item" target="_blank">
+                <i class="fab fa-twitch" style="color: var(--accent-twitch);"></i>
+                Twitch
+                <span class="live-indicator twitch-live"></span>
+            </a>
+            
+            <a href="https://kick.com/ilukz1" class="link-item" target="_blank">
+                <i class="fa-solid fa-k" style="color: var(--accent-kick);"></i>
+                Kick
+                <span class="live-indicator kick-live"></span>
+            </a>
+
+            <a href="https://www.instagram.com/ilukz1_?igsh=MXhpNW5obHkxeDJ3Yw==" class="link-item" target="_blank">
+                <i class="fab fa-instagram" style="color: #e4405f;"></i>
+                Instagram
+            </a>
+
+            <a href="https://www.tiktok.com/@ilukz1_?lang=es-419" class="link-item" target="_blank">
+                <i class="fab fa-tiktok"></i>
+                TikTok
+            </a>
+
+            <a href="https://www.youtube.com/@iLukzZ" class="link-item" target="_blank">
+                <i class="fab fa-youtube" style="color: #ff0000;"></i>
+                YouTube
+            </a>
+
+            <a href="TU_LINK_FACEBOOK" class="link-item" target="_blank">
+                <i class="fab fa-facebook" style="color: #1877f2;"></i>
+                Facebook
+            </a>
+        </nav>
+
+        <footer>
+            &copy; 2026 ILUKZ1_
+        </footer>
+    </div>
+</body>
+</html>
